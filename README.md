@@ -24,6 +24,10 @@ Train no.
 4 - - - - - - P 10:24 10:42 - 12:54 14:03 9074
 ```
 
+## Status: In progress
+
+This project is not yet functional.
+
 ## Installation
 
 Please note that zip/unzip and [node 11.x](https://nodejs.org) or above are required.
