@@ -1,0 +1,8 @@
+node_modules/
+.idea/
+typings/
+npm-debug.log
+dist/
+gtfs.zip
+*.zip
+

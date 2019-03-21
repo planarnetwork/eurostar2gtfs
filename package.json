@@ -1,0 +1,46 @@
+{
+  "name": "eurostar2gtfs",
+  "version": "1.0.0",
+  "description": "Create a GTFS dataset from the Eurostar timetable",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "eurostar2gtfs": "bin/eurostar2gtfs.sh"
+  },
+  "scripts": {
+    "start": "ts-node src/cli.ts",
+    "prepublishOnly": "rm -r dist;tsc -p ./ --outDir dist/",
+    "test": "npm run lint && mocha --require ts-node/register 'test/**/*.spec.ts'",
+    "lint-raw": "tslint --project tsconfig.json",
+    "lint": "npm run lint-raw -- -t stylish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/planarnetwork/eurostar2gtfs.git"
+  },
+  "keywords": [
+    "gtfs",
+    "transit",
+    "data"
+  ],
+  "author": "Linus Norton <linusnorton@gmail.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/planarnetwork/eurostar2gtfs/issues"
+  },
+  "homepage": "https://github.com/planarnetwork/eurostar2gtfs#readme",
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.6",
+    "@types/node": "^11.11.4",
+    "chai": "^4.2.0",
+    "mocha": "^6.0.2",
+    "ts-node": "^8.0.3",
+    "tslint": "^5.14.0",
+    "typescript": "^3.3.4000"
+  },
+  "dependencies": {
+    "@js-joda/locale_en": "^2.0.1",
+    "js-joda": "^1.9.3"
+  }
+}
