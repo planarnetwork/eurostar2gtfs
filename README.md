@@ -49,7 +49,7 @@ eurostar2gtfs eurostar.txt output.zip
 
 ## Notes
 
-There is an [example of the text format](eurostar.txt) in the repository. It is a close copy of the [PDF timetable](https://content-static.eurostar.com/documents/446099_Timetables%20Core%20destination_Issue%2082_UK%20EN_0.pdf). The dates require some manual editing into one of the following formats:
+There is an [example of the text format](timetable.txt) in the repository. It is a close copy of the [PDF timetable](https://content-static.eurostar.com/documents/446099_Timetables%20Core%20destination_Issue%2082_UK%20EN_0.pdf). The dates require some manual editing into one of the following formats:
 
  * 1 Runs from 31 March 2019
  * 2 Runs between 6 April 2019 and 20 April 2019. Runs on 4 May 2019.
