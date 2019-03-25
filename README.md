@@ -31,7 +31,6 @@ Please note that [node 11.x](https://nodejs.org) or above are required.
 eurostar2gtfs is a CLI tool that can be installed via NPM:
 
 ```
-sudo apt-get install nodejs zip
 npm install -g eurostar2gtfs
 ```
 
