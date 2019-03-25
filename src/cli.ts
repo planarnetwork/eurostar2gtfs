@@ -1,8 +1,9 @@
 import { promisify } from "util";
-import { readFile } from "fs";
+import { readFile, writeFile } from "fs";
 import { processTimetable } from "./eurostar/timetable";
 import { createServiceIdRepository } from "./gtfs/repository/service";
 import { createTripIdRepository } from "./gtfs/repository/trip";
+import { createZip } from "./zip/create";
 
 const read = promisify(readFile);
 
@@ -11,13 +12,13 @@ async function main() {
   const getTripId = createTripIdRepository();
   const filename = process.argv[2] || "timetable.txt";
   const contents = await read(filename, "utf8");
+  const gtfsFilename = process.argv[3] || "gtfs.zip";
   const gtfs = contents
     .split("# ")
     .slice(1)
-    .map(timetable => processTimetable(getServiceId, getTripId, timetable));
-    // .reduce(flattenGTFS, {});
+    .flatMap(timetable => processTimetable(getServiceId, getTripId, timetable));
 
-  gtfs.forEach(g => console.log(g));
+  createZip(gtfs).writeZip(gtfsFilename);
 }
 
 main().catch(e => console.error(e));

@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/planarnetwork/eurostar2gtfs#readme",
   "devDependencies": {
+    "@types/adm-zip": "^0.4.32",
     "@types/chai": "^4.1.7",
     "@types/mocha": "^5.2.6",
     "@types/node": "^11.11.4",
@@ -41,6 +42,7 @@
   },
   "dependencies": {
     "@js-joda/locale_en": "^2.0.1",
+    "adm-zip": "^0.4.13",
     "js-joda": "^1.9.3"
   }
 }
