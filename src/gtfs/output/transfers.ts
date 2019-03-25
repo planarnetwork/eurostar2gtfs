@@ -17,7 +17,8 @@ export function outputTransfers(gtfs: PartialGtfs[]): string {
   };
 
   return header + gtfs
-  .flatMap(g => g.stopTimes)
-  .map(st => seenStops[st.stop] ? "" : getTransfer(st.stop))
-  .join("\n");
+    .flatMap(g => g.stopTimes)
+    .map(st => seenStops[st.stop] ? "" : getTransfer(st.stop))
+    .filter(row => row !== "")
+    .join("\n");
 }

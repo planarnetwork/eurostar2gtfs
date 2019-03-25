@@ -1,4 +1,4 @@
 
 export function stopId(stopName: string): string {
-  return stopName.toLowerCase().replace(" ", "_");
+  return stopName.split(" ")[0].toLowerCase();
 }

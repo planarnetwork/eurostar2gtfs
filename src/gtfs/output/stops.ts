@@ -27,5 +27,6 @@ export function outputStops(gtfs: PartialGtfs[]): string {
   return header + gtfs
     .flatMap(g => g.stopTimes)
     .map(st => seenStops[st.stop] ? "" : getStop(st.stop))
+    .filter(row => row !== "")
     .join("\n");
 }

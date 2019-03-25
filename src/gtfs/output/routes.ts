@@ -30,5 +30,6 @@ export function outputRoutes(gtfs: PartialGtfs[]): string {
 
   return header + gtfs
     .map(getRoute)
+    .filter(row => row !== "")
     .join("\n");
 }

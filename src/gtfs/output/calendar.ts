@@ -19,6 +19,7 @@ export function outputCalendar(gtfs: PartialGtfs[]): string {
 
   return header + gtfs
     .map(g => processedServices[g.calendar.serviceId] ? "" : getRow(g.calendar))
+    .filter(row => row !== "")
     .join("\n");
 }
 
