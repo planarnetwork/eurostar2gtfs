@@ -2,7 +2,7 @@ import { PartialGtfs } from "../gtfs";
 import { stopId } from "../stop";
 
 const coords = {
-  "london": [51.5314, 0.1261],
+  "london": [51.53239, -0.12719],
   "ashford": [51.1465, 0.8750],
   "ebbsfleet": [51.4431, 0.3209],
   "paris": [48.8809, 2.3553],

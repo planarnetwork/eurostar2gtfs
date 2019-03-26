@@ -29,7 +29,7 @@ describe("outputStops", () => {
   it("gets stops from a partial GTFS", () => {
     const actual = outputStops(gtfs);
     const expected = "stop_id,stop_code,stop_name,stop_desc,stop_lat,stop_lon,zone_id,stop_url,location_type,parent_station,stop_timezone,wheelchair_boarding\n"
-      + "london,london,LONDON St Pancras Intl,LONDON St Pancras Intl,51.5314,0.1261,,,,,,0\n"
+      + "london,london,LONDON St Pancras Intl,LONDON St Pancras Intl,51.53239,-0.12719,,,,,,0\n"
       + "ebbsfleet,ebbsfleet,EBBSFLEET International,EBBSFLEET International,51.4431,0.3209,,,,,,0\n"
       + "ashford,ashford,ASHFORD International,ASHFORD International,51.1465,0.875,,,,,,0\n"
       + "paris,paris,PARIS Gare du Nord,PARIS Gare du Nord,48.8809,2.3553,,,,,,0";
