@@ -8,7 +8,7 @@ export function outputCalendarDates(gtfs: PartialGtfs[]): string {
   const getDates = (g: PartialGtfs) => {
     processedServices[g.calendar.serviceId] = true;
 
-    return g.calendarDates.map(d => [d.serviceId, gdate(d.date), 1].join(","));
+    return g.calendarDates.map(d => [d.serviceId, gdate(d.date), 2].join(","));
   };
 
   return header + gtfs

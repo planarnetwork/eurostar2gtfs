@@ -29,8 +29,8 @@ describe("outputCalendarDates", () => {
   it("gets calendar dates from a partial GTFS", () => {
     const actual = outputCalendarDates(gtfs);
     const expected = "service_id,date,exception_type\n"
-      + "2,20190120,1\n"
-      + "2,20190121,1";
+      + "2,20190120,2\n"
+      + "2,20190121,2";
 
     chai.expect(actual).to.equal(expected);
   });
