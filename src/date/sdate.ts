@@ -8,7 +8,7 @@ const formatter = DateTimeFormatter
 /**
  * Convert "04 DEC 2019" to a LocalDate
  */
-export function sdate(input: string) {
+export function sdate(input: string): LocalDate {
   const [day, month, year] = input.split(" ");
   const mmm = month.charAt(0) + month.slice(1).toLowerCase();
   const dateString = [day, mmm, year].join(" ");

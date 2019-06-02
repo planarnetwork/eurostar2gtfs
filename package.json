@@ -1,6 +1,6 @@
 {
   "name": "eurostar2gtfs",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Create a GTFS dataset from the Eurostar timetable",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -32,18 +32,18 @@
   "devDependencies": {
     "@types/adm-zip": "^0.4.32",
     "@types/chai": "^4.1.7",
-    "@types/mocha": "^5.2.6",
-    "@types/node": "^11.11.8",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^11.13.13",
     "chai": "^4.2.0",
-    "mocha": "^6.0.2",
-    "ts-node": "^8.0.3",
-    "tslint": "^5.14.0",
-    "typescript": "^3.3.4000"
+    "mocha": "^6.1.4",
+    "ts-node": "^8.2.0",
+    "tslint": "^5.17.0",
+    "typescript": "^3.5.1"
   },
   "dependencies": {
     "@js-joda/locale_en": "^2.0.1",
     "adm-zip": "^0.4.13",
-    "js-joda": "^1.9.3",
+    "js-joda": "^1.10.1",
     "js-joda-timezone": "^2.0.2"
   }
 }

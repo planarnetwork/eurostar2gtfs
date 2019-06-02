@@ -12,6 +12,9 @@ const coords = {
   "rotterdam": [51.9225, 4.47917],
   "amsterdam": [52.3791, 4.9003],
   "marne": [48.8593, 2.5985],
+  "lyon": [45.756330, 4.855663],
+  "avignon": [43.919662, 4.784830],
+  "marseille": [43.301832, 5.375331],
 };
 
 export function outputStops(gtfs: PartialGtfs[]): string {

@@ -8,6 +8,6 @@ const formatter = DateTimeFormatter
 /**
  * Convert "4 March 2019" to a LocalDate
  */
-export function date(input: string) {
+export function date(input: string): LocalDate {
   return LocalDate.parse(input, formatter);
 }

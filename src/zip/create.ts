@@ -29,8 +29,7 @@ export function createZip(gtfs: PartialGtfs[]): AdmZip {
   for (const file in files) {
     const contents = files[file](gtfs);
 
-    zip.addFile(file, Buffer.alloc(contents.length, contents));
-
+    zip.addFile(file, Buffer.alloc(Buffer.byteLength(contents, "utf8"), contents));
   }
 
   return zip;

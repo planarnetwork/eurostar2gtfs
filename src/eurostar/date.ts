@@ -43,6 +43,11 @@ export function getTimetableDates(startDate: LocalDate, endDate: LocalDate, cale
     const [dateString, ...excludes] = line.split(", ");
     const excluding = excludes.map(t => date(t.substr(15)));
     const calendarType = dateString.substr(5, 3);
+
+    if (!lineProcessors[calendarType]) {
+      throw "Unknown date: " + line;
+    }
+
     const dateValue = dateString.substr(dateString.indexOf(" ", 5) + 1);
     const [start, end] = lineProcessors[calendarType](dateValue);
 
@@ -50,7 +55,7 @@ export function getTimetableDates(startDate: LocalDate, endDate: LocalDate, cale
   };
 
   const createDatesFromLine = (line: string) => line
-    .substr(2)
+    .substr(line.indexOf(" ") + 1)
     .split(". ")
     .map(createDatesFromSentence);
 
