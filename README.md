@@ -1,3 +1,7 @@
+# Deprecation
+
+This project is no longer supported as Eurostar now provide an official GTFS feed: https://transport.data.gouv.fr/datasets/eurostar-gtfs
+
 ![eurostar2gtfs](logo.png)
 
 [![Travis](https://img.shields.io/travis/planarnetwork/eurostar2gtfs.svg?style=flat-square)](https://travis-ci.org/planarnetwork/eurostar2gtfs) ![npm](https://img.shields.io/npm/v/eurostar2gtfs.svg?style=flat-square) ![David](https://img.shields.io/david/planarnetwork/eurostar2gtfs.svg?style=flat-square)
